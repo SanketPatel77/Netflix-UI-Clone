@@ -1,10 +1,12 @@
-const firstAnswer = document.querySelector(".answer");
+const questions = document.querySelectorAll(".question");
 
-function display() {
-  console.log("hyyyyy");
-  if (firstAnswer.style.display == "none") {
-    firstAnswer.style.display = "block";
-  } else {
-    firstAnswer.style.display = "none";
-  }
-}
+questions.forEach((question) => {
+  const ans = question.querySelector(".answer");
+  question.addEventListener("click", () => {
+    if (ans.style.display === "none") {
+      ans.style.display = "block";
+    } else {
+      ans.style.display = "none";
+    }
+  });
+});
